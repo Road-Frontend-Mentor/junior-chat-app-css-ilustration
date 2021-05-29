@@ -1,0 +1,55 @@
+include ../mixins/user
+include ../mixins/price
+include ../mixins/chat-message
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Fronten Mentor - Chat app CSS ilustration
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css")
+    link(rel="stylesheet" href="./stylesheets/style.css")
+  body
+    main.main
+      article.chat
+        header.chat__header
+          i.fas.fa-ellipsis-v.chat__left-icon
+          +user("fury","Nick Fury","Available for Walk")
+          i.fas.fa-ellipsis-v.chat__right-icon
+        .chat__content
+          +chat-message()
+            p.chat__message.char__message--has-shadow That sounds great. I’d be happy with that.
+          +chat-message()
+            p.chat__message.chat__message--has-shadow Could you send over some pictures of your dog, please?
+          +chat-message("end")
+            img.chat__image(src="images/dog-image-1.jpg" alt="Dog 1")
+            img.chat__image(src="images/dog-image-2.jpg" alt="Dog 2")
+            img.chat__image(src="images/dog-image-3.jpg" alt="Dog 3")
+          +chat-message("end")
+            p.chat__message.chat__message--has-shadow Here are a few pictures. She’s a happy girl!
+          +chat-message("end")
+            p.chat__message.chat__message--has-shadow Can you make it?
+          +chat-message()
+            p.chat__message.chat__message--has-shadow.
+              She looks so happy! The time we discussed works. How long shalla
+              I take her out for?
+          +chat-message()
+            +price("30 minute walk","$29")
+          +chat-message()
+            +price("1 hour walk","$49")
+        footer.chat__footer
+          form.chat__form.form
+           .form__field.form__field--with-button
+              input#message.form__input(type="text", name="message", placeholder="Type a message...")
+              button.form__input-button(type="submit"): i.fas.fa.chevron.right
+      section.section
+        h2.title Simple booking
+        p.paragraph.
+          Stay in touch with our dog walkers through the chat interface. This makes it easy to
+          discuss arrangements and make bookings. Once the walk has been completed you can rate
+          your walker and book again all through the chat.
+

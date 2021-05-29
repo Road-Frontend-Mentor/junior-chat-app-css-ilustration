@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fronten Mentor - Chat app CSS ilustration</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+  </head>
+  <body>
+    <main class="main">
+      <article class="chat">
+        <header class="chat__header"><i class="fas fa-ellipsis-v chat__left-icon"></i>
+          <article class="user">
+            <div class="user__left"><img class="user__profile-picture" src="images/fury.webp" alt="Nick Fury profile picture"/></div>
+            <div class="user__right">
+              <h2 class="user__name">Nick Fury</h2>
+              <p class="user__status">Available for Walk</p>
+            </div>
+          </article><i class="fas fa-ellipsis-v chat__right-icon"></i>
+        </header>
+        <div class="chat__content">
+          <div class="chat__message-container chat__message-container--justify-start">
+            <p class="chat__message char__message--has-shadow">That sounds great. I’d be happy with that.</p>
+          </div>
+          <div class="chat__message-container chat__message-container--justify-start">
+            <p class="chat__message chat__message--has-shadow">Could you send over some pictures of your dog, please?</p>
+          </div>
+          <div class="chat__message-container chat__message-container--justify-end"><img class="chat__image" src="images/dog-image-1.jpg" alt="Dog 1"><img class="chat__image" src="images/dog-image-2.jpg" alt="Dog 2"><img class="chat__image" src="images/dog-image-3.jpg" alt="Dog 3">
+          </div>
+          <div class="chat__message-container chat__message-container--justify-end">
+            <p class="chat__message chat__message--has-shadow">Here are a few pictures. She’s a happy girl!</p>
+          </div>
+          <div class="chat__message-container chat__message-container--justify-end">
+            <p class="chat__message chat__message--has-shadow">Can you make it?</p>
+          </div>
+          <div class="chat__message-container chat__message-container--justify-start">
+            <p class="chat__message chat__message--has-shadow">
+              She looks so happy! The time we discussed works. How long shalla
+              I take her out for?
+            </p>
+          </div>
+          <div class="chat__message-container chat__message-container--justify-start">
+            <div class="price"><i class="far fa-clock price__icon"></i>
+              <p class="price__time"> <span class="price__money">$29</span></p>
+            </div>
+          </div>
+          <div class="chat__message-container chat__message-container--justify-start">
+            <div class="price"><i class="far fa-clock price__icon"></i>
+              <p class="price__time"> <span class="price__money">$49</span></p>
+            </div>
+          </div>
+        </div>
+        <footer class="chat__footer">
+          <form class="chat__form form">
+            <div class="form__field form__field--with-button">
+              <input class="form__input" id="message" type="text" name="message" placeholder="Type a message...">
+              <button class="form__input-button" type="submit"><i class="fas fa chevron right"></i></button>
+            </div>
+          </form>
+        </footer>
+      </article>
+      <section class="section">
+        <h2 class="title">Simple booking</h2>
+        <p class="paragraph">
+          Stay in touch with our dog walkers through the chat interface. This makes it easy to
+          discuss arrangements and make bookings. Once the walk has been completed you can rate
+          your walker and book again all through the chat.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

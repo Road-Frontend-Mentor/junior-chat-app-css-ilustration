@@ -1,0 +1,7 @@
+@function gradient($direction: "to right") {
+  @return linear-gradient(
+    #{$direction},
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+}

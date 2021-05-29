@@ -1,0 +1,108 @@
+.chat {
+  max-width: 325px;
+  width: 100%;
+  margin: auto;
+  border-radius: 50px;
+  border: 15px solid white;
+  background-color: $background;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  box-shadow: 0 20px 60px rgba(#000000, 0.2);
+
+  &__header {
+    $radius-size: 7px;
+    $pill-height: 50px;
+
+    position: relative;
+    padding: calc(#{$pill-height} / 2 + 1rem) 1rem 1rem;
+    background-image: gradient("to left");
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 $radius-size $radius-size;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: $pill-height;
+      border-radius: ($pill-height / 2) - 5px;
+      background-color: white;
+      top: -($pill-height / 2);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  $icon-margin: 0.5rem;
+
+  &__left-icon,
+  &__right-icon {
+    color: white;
+  }
+
+  &__left-icon {
+    margin-right: $icon-margin;
+  }
+
+  &__right-icon {
+    margin-left: $icon-margin;
+  }
+
+  &__content {
+    padding: 1rem 0.75rem;
+  }
+
+  &__message-container {
+    display: flex;
+
+    &--justify-start {
+      --box-shadow-color: hsla(276, 100%, 81%, 0.46);
+
+      justify-content: flex-start;
+    }
+
+    &--justify-end {
+      --message-background: white;
+      --message-color: #434343;
+
+      justify-content: flex-end;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__message {
+    padding: 0.5rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    max-width: 70%;
+    line-height: 1.4;
+    background-color: var(--message-background, #{$pale-violet}44);
+    color: var(--message-color, $moderate-violet);
+
+    &--has-shadow {
+      box-shadow: 0 2px 3px var(--box-shadow-color, rgba(#000000, 0.07));
+    }
+  }
+
+  &__image {
+    width: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 5px rgba(62, 39, 83, 0.05);
+
+    &:not(:last-child) {
+      margin-right: 0.75rem;
+    }
+  }
+
+  &__footer {
+    padding: 0 1rem 1rem;
+  }
+
+  @include from($desktop) {
+    margin-bottom: 0;
+  }
+}
